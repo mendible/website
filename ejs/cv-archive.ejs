@@ -1,0 +1,65 @@
+```{=html}
+<% items.sort(function(a,b){return new Date(b.date) - new Date(a.date)}) %>
+<% var cutoffDate = new Date() %>
+<% cutoffDate.setDate(cutoffDate.getDate() - 90) %>
+<% var currentMonth = 0 %>
+<% var currentYear = 0 %>
+
+<br> <h2>Talks</h2> </br>
+<table>
+    <colgroup>
+        <col span="1" style="width: 10%;"> 
+        <col span="1" style="width: 80%;">
+        <col span="1" style="width: 10%;">
+    </colgroup>
+    <tbody>
+<% for (const item of items) { %>
+    <% var itemDate = new Date(item.date) %>
+    <% var itemMonth = itemDate.toLocaleString("en-US", { month: "long" }) %>
+    <% var itemYear = itemDate.getFullYear() %>
+    <% var itemSection = item.cvtype %>
+    <% if (itemSection == "talks") { %>
+        <td class="month">
+        <% if (itemMonth != currentMonth) { %>
+            <% currentMonth = itemMonth %> 
+            <b><%= currentMonth %><br><%= itemYear %> </b>
+        <% } %>
+        </td>
+        <td class="news-item"> <%= item.text %> </td>
+        <td class="cv-type"> <%= itemSection %> </td>
+        </tr>
+    <% } %>
+<% } %>
+    </tbody>
+</table>
+
+<% var currentMonth = 0 %>
+<% var currentYear = 0 %>
+<br> <h3>Papers</h3> </br>
+<table>
+    <colgroup>
+        <col span="1" style="width: 10%;"> 
+        <col span="1" style="width: 80%;">
+        <col span="1" style="width: 10%;">
+    </colgroup>
+    <tbody>
+<% for (const item of items) { %>
+    <% var itemDate = new Date(item.date) %>
+    <% var itemMonth = itemDate.toLocaleString("en-US", { month: "long" }) %>
+    <% var itemYear = itemDate.getFullYear() %>
+    <% var itemSection = item.cvtype %>
+    <% if (itemSection == "papers") { %>
+        <td class="month">
+        <% if (itemMonth != currentMonth) { %>
+            <% currentMonth = itemMonth %> 
+            <b><%= currentMonth %><br><%= itemYear %> </b>
+        <% } %>
+        </td>
+        <td class="news-item"> <%= item.text %> </td>
+        <td class="cv-type"> <%= itemSection %> </td>
+        </tr>
+    <% } %>
+<% } %>
+    </tbody>
+</table>
+```

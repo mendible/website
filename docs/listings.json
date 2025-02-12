@@ -4,6 +4,10 @@
     "items": []
   },
   {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
     "listing": "/research.html",
     "items": [
       "/pub-roms/untwist-rotation/index.html",
@@ -17,7 +21,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/cv_archive.html",
     "items": []
   }
 ]

@@ -56,17 +56,24 @@
   text: | 
     I am invited to present in the <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=79747"> Workshop Celebrating Diversity Minisymposium: Quantitative Justice through Applied Data Science </a> at the SIAM Annual Meeting in Spokane, WA. 
 - date: 2024-07-10
+  cvtype: talks
   text: I organize the Human Networks, Social Sciences, and Economics track at <a href="https://www.scipy2024.scipy.org/">SciPy 2024</a>.
 - date: 2024-07-15
+  cvtype: papers
   text: |
     Article: "<a href='https://www.tandfonline.com/doi/epdf/10.1080/2330443X.2024.2379270?needAccess=true'>Data Collection and Analysis for Small-Town Policing: Challenges and Recommendations</a>" is published in <i>Statistics and Public Policy</i>.
 - date: 2024-07-18
+  cvtype: talks
+  detail: This should be a bullet point
   text: |
     I wrote a blog post for <i>Math Values</i>: "<a href='https://www.mathvalues.org/masterblog/quantitative-justice-using-data-science-for-good/'>Quantitative Justice: Using Data Science for Good</a>".
 - date: 2024-09-01
+  cvtype: talks
   text: In the fall of 2024, I was on sabbatical!
 - date: 2024-12-01
+  cvtype: talks
   text: |
     Article: "<a href='http://digitaleditions.walsworthprintgroup.com/publication/?i=836749&p=24&view=issueViewer'>Counting on Justice: Bridging Quantitative Research and Community Empowerment</a>" is published in <i>MAA Focus</i>.
 - date: 2025-01-08
   text: I give a talk in the <a href='https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Session/11995'>NAM-SIAM-AMS Special Session on Quantitative Justice</a> at the Joint Mathematics Meetings in Seattle. 
+  cvtype: talks

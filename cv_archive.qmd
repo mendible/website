@@ -1,0 +1,14 @@
+---
+title: "CV Archive"
+page-layout: article
+toc: false
+listing:
+  - id: old_news
+    contents: 
+      - news.yml
+    sort-ui: false
+    filter-ui: false
+    template: ejs/cv-archive.ejs
+---
+
+# 
