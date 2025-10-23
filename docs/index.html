@@ -221,27 +221,12 @@ window.Quarto = {
 <section id="latest" class="level3">
 <h3 data-anchor-id="latest">Latest</h3>
 <div id="listing-news" class="quarto-listing quarto-listing-container-custom">
-<table class="caption-top table" data-quarto-postprocess="true">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 90%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td class="month"><strong>January<br>
-2025</strong></td>
-<td class="news-item">I give a talk in the <a href="https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Session/11995">NAM-SIAM-AMS Special Session on Quantitative Justice</a> at the Joint Mathematics Meetings in Seattle.</td>
-</tr>
-<tr class="even">
-<td class="month"><strong>December<br>
-2024</strong></td>
-<td class="news-item">Article: "<a href="http://digitaleditions.walsworthprintgroup.com/publication/?i=836749&amp;p=24&amp;view=issueViewer">Counting on Justice: Bridging Quantitative Research and Community Empowerment</a>" is published in <em>MAA Focus</em>.</td>
-</tr>
-<tr class="odd">
-<td class="month"><strong>September<br>
-2024</strong></td>
-<td class="news-item">In the fall of 2024, I was on sabbatical!</td>
-</tr>
+<table>
+    <colgroup>
+        <col span="1" style="width: 10%;"> 
+        <col span="1" style="width: 90%;">
+    </colgroup>
+    <tbody>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">
@@ -341,7 +326,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/arianamendible\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
