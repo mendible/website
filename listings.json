@@ -1,0 +1,27 @@
+[
+  {
+    "listing": "/news_archive.html",
+    "items": []
+  },
+  {
+    "listing": "/cv_archive.html",
+    "items": []
+  },
+  {
+    "listing": "/research.html",
+    "items": [
+      "/pub-roms/untwist-rotation/index.html",
+      "/pub-roms/untwist-2d/index.html",
+      "/pub-roms/untwist/index.html",
+      "/pub-roms/nnmf/index.html",
+      "/pub-ds4sj/small-town-police-accountability/index.html",
+      "/pub-ds4sj/ds4sj-math-community/index.html",
+      "/pub-other/air-flow/index.html",
+      "/pub-other/chemistry/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
+  }
+]
