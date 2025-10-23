@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-10-22">
 
 <title>Making Decisions Based in Data and Supported by Visualization – Ariana Mendible</title>
 <style>
@@ -145,6 +146,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta column-page-left">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 22, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -165,18 +172,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="misleading-visualization-a-case-study" class="level2">
 <h2 class="anchored" data-anchor-id="misleading-visualization-a-case-study">Misleading Visualization: A Case Study</h2>
-<p>When I teach this class, we spend lots of time discussing ways to not mislead viewers. I would like to critically delve into one particular visualization to break down some of these areas, discuss the harm these misleading elements cause, and suggest improvements to the visualiation. This visual was presented by administrators at a faculty meeting discussing employee benefits and was being used in budget planning. Specifically, the plot shows the change over time in fringe benefit rate. Fringe benefit rate would be computed as the ratio of non-salary compensation (such as health insurance, retirement, and tution remission) to overall compensation. For example, if my salary were $70,000 and my benefits totalled to $30,000, my fringe benefit rate would be 30%.</p>
+<p>When I teach this class, we spend lots of time discussing ways to not mislead viewers. I would like to critically delve into one particular visualization to break down some of these areas, discuss the harm these misleading elements cause, and suggest improvements to the visualiation. This visual was presented by university administrators at a faculty meeting discussing budget planning around employee benefits. Specifically, the plot shows the change over time in fringe benefit rate. Fringe benefit rate would be computed as the ratio of non-salary compensation (such as health insurance, retirement, and tution remission) to overall compensation. For example, if my salary were $70,000 and my benefits totalled to $30,000, my fringe benefit rate would be 30%.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/original_plot.JPG" class="img-fluid figure-img"></p>
+<p><img src="assets/img/original_plot.JPG" class="img-fluid figure-img" alt="A line plot showing how fringe benefit rates change from FY07 to FY26. The rate fluctuates over time with a very slight upward trend. A thick red arrow is overlaid with a steeply increasing angle."></p>
 <figcaption>A screenshot of the original visualization, showing the change in fringe benefit rates from fiscal years 2007-2026.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></figcaption>
 </figure>
 </div>
-<p>There are a number of critiques I would take with this graphic if this were presented as a homework submission by a student, but I will focus on the areas in which this graphic is <em>misleading</em> (read: wrong). Some appear to be intentional, meaning a biased story is being presented as fact, and some are likely not, meaning the way the graphic is designed might encourage assumptions that are incorrect. Since I want readers to learn from this, I will also remake and correct the plot as we go.</p>
+<p>There are a number of critiques I would take with this graphic if this were presented as a homework submission by a student, but I will focus on the areas in which this graphic is <em>misleading</em> (read: wrong). Some appear to be intentional, meaning a biased story is being presented as fact, and some are likely not, meaning the way the graphic is designed might encourage assumptions that are incorrect. I am putting this together not as a complaint but as an opportunity for learning<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, so I will walk through suggested changes as I go.</p>
 <ol type="1">
 <li>The text callout for FY25 reads “Highest ever projected Fringe Benefit Rate (35%)”, but the data point showing the projection is clearly under the 34% grid line.</li>
-<li>The values for FY25 and FY26 are projections, but are displayed identically to the known values.</li>
-<li>The glaring red line showing a huge increase in the fringe benefit rate over time is… suspicious. This warrants further investigation.</li>
+<li>The values for FY25 and FY26 are projections, but the line plot display them identically to the known values.</li>
+<li>The glaring red line showing a huge increase in the fringe benefit rate over time is… curious. This warrants further investigation.</li>
 </ol>
 <section id="design-changes" class="level3">
 <h3 class="anchored" data-anchor-id="design-changes">Design Changes</h3>
@@ -190,11 +197,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Here I have addressed points 1 and 2. I changed the FY25 and FY26 values to dotted lines, which signals to the viewer that this data is a projection rather than known data. I have also tied the text callout to the data itself, so if my numbers updated, so would my plot without having to plan or think. I also made some minor design adjustments to improve the plot’s readability<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>Here I have addressed points 1 and 2. I changed the FY25 and FY26 values to dotted lines, which signals to the viewer that this data is a projection rather than known data. I have also tied the text callout to the data itself, so if my numbers updated, so would my plot without having to plan or think. I also made some minor design adjustments to improve the plot’s readability<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
 </section>
 <section id="predicting-new-values" class="level3">
 <h3 class="anchored" data-anchor-id="predicting-new-values">Predicting New Values</h3>
-<p>Now to investigate the final issue with the plot: the red line. To an innocent viewer, the line seems to be a “best fit” of the data, or linear regression. This would be a very useful way to summarize the pattern shown. For comparison, let’s see what a real linear regression looks like compared to the red line.</p>
+<p>Now to investigate the final issue with the plot: the red line. To an innocent viewer, the line seems to be a “best fit” of the data, or linear regression. This would be a very useful way to summarize the pattern shown. For comparison, let’s see what a real linear regression looks like compared to the red line<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -204,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Interesting! The linear regression, based on the real data from FY07-FY24, shows only a moderate increase in the fringe benefit rates, much smaller than the red line would indicate. The slope for this linear regression is 0.018, meaning the fringe benefit rate increases by about 0.018%<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> per year over this time. This is compared to the slope of the red line, which works out to be 0.356, or a 0.356%<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> increase per year over this time. Comparing the two values, the slope of the red line is about 19 times steeper than that of the true linear regression!</p>
+<p>Interesting! The linear regression, based on the real data from FY07-FY24, shows only a moderate increase in the fringe benefit rates, much smaller than the red line would indicate. The slope for this linear regression is 0.018, meaning the fringe benefit rate increases by about 0.018%<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> per year over this time. This is compared to the slope of the red line, which works out to be 0.356, or a 0.356%<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> increase per year over this time. Comparing the two values, the slope of the red line is about 19 times steeper than that of the true linear regression!</p>
 <p>I also want to give the benefit of the doubt again, perhaps this red line is based instead on <em>all</em> the values, including the projected one? I tried this as well, and unfortunately though the slope has increases, it is still nowhere near the red line– the slope is now 0.063.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -218,7 +225,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="reverse-engineering" class="level3">
 <h3 class="anchored" data-anchor-id="reverse-engineering">Reverse Engineering</h3>
-<p>Here is what I really think happened: the line was drawn to simply connect the earliest and latest reasonable data points, which by some record included a projection for 35% in FY25. I am not certain if the projection for FY25 was either originally 35% and then amended, mistakenly marked as 35% because the line automatically snapped to a whole number, or some other reason. If the purpose of the line is to show the increase from FY07-25, then two horizontal lines highlighting this <strong>vertical</strong> gap would be appropriate. Using a sloped line to show this change insinuates to the viewer that the angle is important and unbiased, when in fact it is subject to extreme changes in the time choice. See a few examples below where I have varied the time windows to see how the angle of the line, now drawn between earliest and latest data, tells a very different story in each. So, why the choice of line from FY07-FY25?</p>
+<p>Here is what I really think happened: the line was drawn to simply connect the earliest and latest reasonable data points, which by some record included a projection for 35% in FY25. I am not certain if the projection for FY25 was either originally 35% and then amended, mistakenly marked as 35% because the line automatically snapped to a whole number, or some other reason. If the purpose of the line is to show the increase from FY07-25, then two horizontal lines highlighting this <strong>vertical</strong> gap would be appropriate. Using a sloped line to show this change insinuates to the viewer that the angle is important and unbiased, when in fact it is subject to extreme changes in the time choice. See a few examples below where I have varied the time windows to see how the angle of the line, now drawn between earliest and latest data, tells a very different story in each. I could conclude any of the following based off the graphs:</p>
+<ol type="a">
+<li>The fringe benefit rate has decreased somewhat over the past 15 fiscal years.</li>
+<li>The fringe benefit rate has decreased somewhat over the past 10 fiscal years.</li>
+<li>We are on track to have a moderate increase in fringe benefit rates this fiscal year compared to 5 years ago.</li>
+<li>We are on track to have a significant increase in fringe benefit rates this fiscal year compared to 4 years ago.</li>
+</ol>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -228,12 +241,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>So, why the choice of line from FY07-FY25? Maybe this is the earliest year data was available, or perhaps this was a concious choice made by the author of the plot. Any choice of time scale is justifiable and reasonable, I am not saying some are true and some are lies. However, presenters should be aware that they affect the story depending on choices like axes limits and scales. This is another reason why using linear regression would be a better strategy– the story would not change so significantly if the time scale were off by a handful of years. Including a confidence interval would also show the audience that even though the line might look conclusive, we actually could be very off in our estimate of change. My ultimate version of the plot would look like the following:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot shows the data exactly: the observed values are clearly different from the predicted values, sound statistics are used to show the historical trend, and a confidence interval shows that the FY25 rates are in fact higher than we could have expected based on the trend. The title also shares the main conclusion, which I believe is true to the plots’ original intention: FY25 fringe benefits are more expensive than normal. It would be important to know how the projections for FY25 and FY26 were computed. I have no doubt (and sincerely hope) that these are estimated by a model more sophisticated than linear regression.</p>
 </section>
 </section>
 <section id="please-show-your-work" class="level2">
 <h2 class="anchored" data-anchor-id="please-show-your-work">Please Show Your Work</h2>
 <p>Of course, there is a limit to how clear and unbiased one can be. The audience may still take a different message away from a plot than what was intended. It is also necessary to make some choices that will impact numbers and visuals, like the starting time of the plot for example. My request to institutional decision-makers is no more than I would expect from my students– where there is choice, nuance, and uncertainty: <strong>please show your work</strong>. Let me know where you obtained the data, what assumptions you made (with justification!), and the process you used to obtain your solutions.</p>
-<p>There have been an increasing number of errors and omissions like this, both in visualization and in the presentation of statistics, shared from the highest leadership at the university. In almost every university-level talk I have attended where visualizations or numbers are shared I see at least one instance of poor data communication. Incorrect and misleading visualizations, inaccessible graphics, and indigestibly large tables instead of a thoughtful graphic are all common. In some situations, claims completely unsupported by any data are touted as facts. These presentations, numbers and conclusions are used to make decisions that impact hundreds of jobs and educational journeys. Misleading the audience to think that these conclusions are supported in the data is simply unacceptable.</p>
+<p>There have been an increasing number of errors and omissions like this, both in visualization and in the presentation of statistics, shared from the highest leadership at the university. In nearly every university-level data presentation I have attended, I see at least one instance of extremely poor data communication. Incorrect and misleading visualizations, inaccessible graphics, and indigestibly large tables instead of a thoughtful graphic are all common. In some situations, claims completely unsupported by any data are touted as facts. Whether it is from a lack of knowledge of best practices or simply a lack of concern for correctness and clarity, I implore administrators to do better.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> These presentations, numbers and conclusions are used to make decisions that impact thousands of jobs and educational journeys. Misleading the audience to think that these conclusions are supported in the data is simply unacceptable.</p>
 
 
 </section>
@@ -243,9 +267,12 @@ ul.task-list li input[type="checkbox"] {
 
 <ol>
 <li id="fn1"><p>I scraped the data from this visualization using <a href="www.plotdigitizer.com">Plot Digitizer</a>, which allows you to set the scale of your plot and select data points to extract. I extracted the start and end of the red line as well as each each fringe rate from the blue line, and rounded the years to be integers 7-26. No other preprocessing was done. There will be a small amount of error with this. If someone is able to provide the original data, I would be happy to correct this with exact values. All computations are tied to my code so it can be easily updated.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>I adjusted the y-axes limits to be zoom into the data, maximizing how the plot space is used, and added extra grid lines for more accurate readability. I edited the x-axis tick labels by removing the “FY”, which increases the <a href="https://jtr13.github.io/cc19/tuftes-principles-of-data-ink.html">data-ink ratio</a>, turning the labels horizontal for readability, and including tick marks to place the year more accurately. I also added a descriptive title to tell the audience explicitly what I want them to understand, which will decrease the chances that they make alternative conclusions or miss the main point.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Be careful to note that <em>percent</em> here is in line with the original variable, <code>percent benefit as compared to salary</code>, not percentage increase of the rate compared to the previous year. Therefore, we should interpret this as in this example: if in FY24 the fringe benefit rate is 31.1%, this linear regression would predict the FY21 fringe benefit rate to be 31.118%.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Unfortunately, this percent may also be confusing as it is very similar to the listed projected benefit rate. Again, if in FY24 the benefit rate is 31.1%, the projection would now be 31.456.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>I am not ignorant of how this post may come across to administrators (and am acutely aware of my position here as non-tenured faculty). I want to emphasize that my goal here is to encourage better data practices in decision-making. If you have comments or concerns about what I have shared, please share them with me via email.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>I adjusted the y-axes limits to be zoom into the data, maximizing how the plot space is used, and added extra grid lines for more accurate readability. I edited the x-axis tick labels by removing the “FY”, which increases the <a href="https://jtr13.github.io/cc19/tuftes-principles-of-data-ink.html">data-ink ratio</a>, turning the labels horizontal for readability, and including tick marks to place the year more accurately. I also added a descriptive title to tell the audience explicitly what I want them to understand, which will decrease the chances that they make alternative conclusions or miss the main point.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Best practices would have us include a confidence interval, which I have intentionally omitted here to keep the discussion as simple as possible.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Be careful to note that <em>percent</em> here is in line with the original variable, <code>percent benefit as compared to salary</code>, not percentage increase of the rate compared to the previous year. Therefore, we should interpret this as in this example: if in FY24 the fringe benefit rate is 31.1%, this linear regression would predict the FY21 fringe benefit rate to be 31.118%.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Unfortunately, this percent may also be confusing as it is very similar to the listed projected benefit rate. Again, if in FY24 the benefit rate is 31.1%, the projection would now be 31.456.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Are you an administrator reading this and wanting to improve but not sure how? I would love to help form a plan for training so that these occurences decrease, please get in contact with me or another Data Science faculty colleague.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
