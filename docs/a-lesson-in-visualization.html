@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-10-22">
 
-<title>Making Decisions Based in Data and Supported by Visualization – Ariana Mendible</title>
+<title>The Dangers of Bad Data Visualization – Ariana Mendible</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#design-changes" id="toc-design-changes" class="nav-link" data-scroll-target="#design-changes">Design Changes</a></li>
   <li><a href="#predicting-new-values" id="toc-predicting-new-values" class="nav-link" data-scroll-target="#predicting-new-values">Predicting New Values</a></li>
-  <li><a href="#reverse-engineering" id="toc-reverse-engineering" class="nav-link" data-scroll-target="#reverse-engineering">Reverse Engineering</a></li>
+  <li><a href="#visualization-choices-are-choices-not-facts" id="toc-visualization-choices-are-choices-not-facts" class="nav-link" data-scroll-target="#visualization-choices-are-choices-not-facts">Visualization Choices are Choices, Not Facts</a></li>
   </ul></li>
   <li><a href="#please-show-your-work" id="toc-please-show-your-work" class="nav-link" data-scroll-target="#please-show-your-work">Please Show Your Work</a></li>
   </ul>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Making Decisions Based in Data and Supported by Visualization</h1>
+<h1 class="title">The Dangers of Bad Data Visualization</h1>
 </div>
 
 
@@ -223,8 +223,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="reverse-engineering" class="level3">
-<h3 class="anchored" data-anchor-id="reverse-engineering">Reverse Engineering</h3>
+<section id="visualization-choices-are-choices-not-facts" class="level3">
+<h3 class="anchored" data-anchor-id="visualization-choices-are-choices-not-facts">Visualization Choices are Choices, Not Facts</h3>
 <p>Here is what I really think happened: the line was drawn to simply connect the earliest and latest reasonable data points, which by some record included a projection for 35% in FY25. I am not certain if the projection for FY25 was either originally 35% and then amended, mistakenly marked as 35% because the line automatically snapped to a whole number, or some other reason. If the purpose of the line is to show the increase from FY07-25, then two horizontal lines highlighting this <strong>vertical</strong> gap would be appropriate. Using a sloped line to show this change insinuates to the viewer that the angle is important and unbiased, when in fact it is subject to extreme changes in the time choice. See a few examples below where I have varied the time windows to see how the angle of the line, now drawn between earliest and latest data, tells a very different story in each. I could conclude any of the following based off the graphs:</p>
 <ol type="a">
 <li>The fringe benefit rate has decreased somewhat over the past 15 fiscal years.</li>
@@ -241,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>So, why the choice of line from FY07-FY25? Maybe this is the earliest year data was available, or perhaps this was a concious choice made by the author of the plot. Any choice of time scale is justifiable and reasonable, I am not saying some are true and some are lies. However, presenters should be aware that they affect the story depending on choices like axes limits and scales. This is another reason why using linear regression would be a better strategy– the story would not change so significantly if the time scale were off by a handful of years. Including a confidence interval would also show the audience that even though the line might look conclusive, we actually could be very off in our estimate of change. My ultimate version of the plot would look like the following:</p>
+<p>So, why the choice of line from FY07-FY25? Maybe this is the earliest year data was available, or perhaps this was a concious choice made by the author of the plot. Any choice of time scale is justifiable and reasonable, I am not saying some are true and some are lies. However, presenters should be aware that they affect the story depending on design decisions like axes limits and scales. This is another reason why using linear regression would be a better strategy– the story would not change so significantly if the time scale were off by a handful of years. Including a confidence interval would also show the audience that even though the line might look conclusive, we actually could be very off in our estimate of change. My ultimate version of the plot would look like the following:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
