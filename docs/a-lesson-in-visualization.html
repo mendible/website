@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 <p>When I teach this class, we spend lots of time discussing ways to not mislead viewers. I would like to critically delve into one particular visualization to break down some of these areas, discuss the harm these misleading elements cause, and suggest improvements to the visualiation. This visual was presented by university administrators at a faculty meeting discussing budget planning around employee benefits. Specifically, the plot shows the change over time in fringe benefit rate. Fringe benefit rate would be computed as the ratio of non-salary compensation (such as health insurance, retirement, and tution remission) to overall compensation. For example, if my salary were $70,000 and my benefits totalled to $30,000, my fringe benefit rate would be 30%.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/original_plot.JPG" class="img-fluid figure-img" alt="A line plot showing how fringe benefit rates change from FY07 to FY26. The rate fluctuates over time with a very slight upward trend. A thick red arrow is overlaid with a steeply increasing angle."></p>
+<p><img src="assets/img/original_plot.JPG" class="img-fluid figure-img" alt="A line plot showing how fringe benefit rates change from FY07 to FY26. The rate fluctuates over time, ranging from around 27% to 33% with a slight upward trend. A thick red arrow which does not pass through the data is overlaid with a steeply increasing angle."></p>
 <figcaption>A screenshot of the original visualization, showing the change in fringe benefit rates from fiscal years 2007-2026.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></figcaption>
 </figure>
 </div>
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Updated line plot of fringe benefit rate from 2007-2026. The same data is shown but now observed values are connected by a solid line as opposed to predicted values shown in a dashed line." width="864"></p>
 </figure>
 </div>
 </div>
@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Updated line plot of fringe benefit rates over time. Now, a linear regression is overlaid and shows a nearly flat progression, much shallower than the original red line." width="864"></p>
 </figure>
 </div>
 </div>
@@ -217,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" alt="Updated line plot of fringe benefit rates over time. Now, a different linear regression is overlaid and shows a higher increase than before, but much shallower than the original red line." width="864"></p>
 </figure>
 </div>
 </div>
@@ -236,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" alt="Four plots show different time windows of the data, each connecting the first and last observations with a red line. The slope of the line changes signficantly betweent the four plots, some are increasing and some are decreasing." width="864"></p>
 </figure>
 </div>
 </div>
@@ -246,12 +246,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="a-lesson-in-visualization_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" alt="Final update of the same fringe benefit rate line plot over time. The same original data is shown, with observed values in solid and predicted values in dashed lines. A linear regression shows a very slight increase in rates over time, and a 90% confidence interval highlights that FY25 values are above expectation. Title reads FY25 fringe benefit rates projected to be higher than historical trends." width="864"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>This plot shows the data exactly: the observed values are clearly different from the predicted values, sound statistics are used to show the historical trend, and a confidence interval shows that the FY25 rates are in fact higher than we could have expected based on the trend. The title also shares the main conclusion, which I believe is true to the plots’ original intention: FY25 fringe benefits are more expensive than normal. It would be important to know how the projections for FY25 and FY26 were computed. I have no doubt (and sincerely hope) that these are estimated by a model more sophisticated than linear regression.</p>
+<p>This plot shows the data exactly: the observed values are clearly different from the projected values, sound statistics are used to show the historical trend, and a 90% confidence interval shows that the FY25 rates are in fact higher than we could have expected based on the trend. The title also shares the main conclusion, which I believe is true to the plots’ original intention: FY25 fringe benefits are more expensive than normal. It would be important to know how the projections for FY25 and FY26 were computed. I have no doubt (and sincerely hope) that these are estimated by a model more sophisticated than linear regression.</p>
 </section>
 </section>
 <section id="please-show-your-work" class="level2">
