@@ -4,10 +4,6 @@
     "items": []
   },
   {
-    "listing": "/index.html",
-    "items": []
-  },
-  {
     "listing": "/research.html",
     "items": [
       "/pub-roms/untwist-rotation/index.html",
@@ -19,8 +15,13 @@
       "/pub-ds4sj/small-town-police-accountability/index.html",
       "/pub-ds4sj/ds4sj-math-community/index.html",
       "/pub-other/air-flow/index.html",
-      "/pub-other/chemistry/index.html"
+      "/pub-other/chemistry/index.html",
+      "/pub-environment/remote-sensing/index.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
   },
   {
     "listing": "/cv_archive.html",
